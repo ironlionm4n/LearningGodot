@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dy52j4k1bxhi5"]
+
+[ext_resource type="Texture2D" uid="uid://cimtqvrlspuuj" path="res://Art/Backgrounds/darkPurple.png" id="1_cbn3w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uxc3c"]
+size = Vector2(250, 250)
+
+[node name="Wall" type="Sprite2D"]
+texture = ExtResource("1_cbn3w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_uxc3c")
