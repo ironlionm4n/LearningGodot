@@ -1,20 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://l34w32kpv0ut"]
+[gd_scene load_steps=5 format=3 uid="uid://l34w32kpv0ut"]
 
 [ext_resource type="Script" path="res://Scripts/Level.cs" id="1_ejl12"]
 [ext_resource type="Texture2D" uid="uid://b5oi3dnv57otv" path="res://Art/Backgrounds/purple.png" id="1_fox0w"]
 [ext_resource type="PackedScene" uid="uid://dvgnwgh03ojtk" path="res://Scenes/player.tscn" id="2_oetnc"]
+[ext_resource type="PackedScene" uid="uid://csggcglruv1o4" path="res://Scenes/Maze.tscn" id="4_xfgra"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_ejl12")
 
 [node name="Background" type="TextureRect" parent="."]
 z_index = -100
+offset_top = 1.0
 offset_right = 645.0
-offset_bottom = 650.0
+offset_bottom = 651.0
 scale = Vector2(1.786, 1)
 texture = ExtResource("1_fox0w")
 stretch_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("2_oetnc")]
+position = Vector2(569, 248)
+
+[node name="Area2D" parent="." instance=ExtResource("4_xfgra")]
+
+[connection signal="body_exited" from="Area2D" to="." method="OnArea2DBodyExited"]
 
 [editable path="Player"]
