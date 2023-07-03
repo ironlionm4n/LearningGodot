@@ -20,6 +20,7 @@ namespace LearningGodot.Scripts;
 		private void OnArea2DBodyExited(Node2D body)
 		{
 			var sceneTree = GetTree();
-			sceneTree.ReloadCurrentScene();
+			if(body.GetType() == typeof(Player))
+				sceneTree.ReloadCurrentScene();
 		}
 	}
