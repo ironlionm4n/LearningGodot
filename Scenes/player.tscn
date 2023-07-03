@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/Player.cs" id="1_n0cp8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ev04j"]
-radius = 45.5
+radius = 12.1655
 
 [node name="Player" type="RigidBody2D"]
 position = Vector2(569, 151)
