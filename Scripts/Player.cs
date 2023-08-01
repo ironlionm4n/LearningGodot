@@ -31,6 +31,5 @@ public partial class Player : RigidBody2D
         direction = direction.Normalized();
 
         _playerRigidbody.ApplyForce(direction * _speed);
-
     }
 }
