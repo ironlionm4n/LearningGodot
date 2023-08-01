@@ -10,7 +10,6 @@ public partial class Player : RigidBody2D
 
     public override void _Ready()
     {
-        base._Ready();
         _playerRigidbody = this;
     }
 
@@ -18,6 +17,8 @@ public partial class Player : RigidBody2D
     {
         base._PhysicsProcess(delta);
         var direction = Vector2.Zero;
+
+        // Consider using "var direction = Input.GetAxis(...)" instead
 
         if (Input.IsActionPressed("move_up"))
             direction.Y -= 1;
@@ -31,6 +32,5 @@ public partial class Player : RigidBody2D
         direction = direction.Normalized();
 
         _playerRigidbody.ApplyForce(direction * _speed);
-
     }
 }
