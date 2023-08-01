@@ -10,7 +10,6 @@ public partial class Player : RigidBody2D
 
     public override void _Ready()
     {
-        base._Ready();
         _playerRigidbody = this;
     }
 
